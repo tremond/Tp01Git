@@ -7,4 +7,4 @@ CREATE TABLE Users (
 )   DEFAULT CHARSET=utf8;
 
 INSERT INTO Users (login, password, isAdmin) VALUES ("Pablo", sha1("password"), true);
-INSERT INTO Users (login, password, isAdmin) VALUES ("Michel", sha1("password"), true);
+INSERT INTO Users (login, password, isAdmin) VALUES ("Michel", sha1("password"), false);
