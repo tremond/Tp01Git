@@ -32,8 +32,8 @@ function getFiltreAnnee() {
 function getFiltreTheme() {
     $bdd = new PDO('mysql:host=localhost;dbname=tp01git;charset=utf8', 'root', '');
     $sqlSelect = 
-        "   SELECT DISTINCT(oeuvres.annee) 
-            FROM oeuvres";
+        "   SELECT DISTINCT(theme.nomTheme) 
+            FROM theme";
     $reponse = $bdd->query($sqlSelect);
     $donnees = $reponse->fetchAll(PDO::FETCH_ASSOC);
     $reponse->closeCursor();

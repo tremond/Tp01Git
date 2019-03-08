@@ -37,9 +37,12 @@ include("header.php");
                         ?>
                     </p>
                     <p class="flat-text">Thème : <br>
-                        <label><input type="checkbox"/><span>Animaux</span></label><br>
-                        <label><input type="checkbox"/><span>Figurines</span></label><br>
-                        <label><input type="checkbox"/><span>Abstrait</span></label>
+                        <?php
+                        $themes = getFiltreTheme();
+                        foreach ($themes as $theme) {
+                            echo '<label><input type="checkbox"/><span>'.$theme['nomTheme'].'</span></label><br>';
+                        }
+                        ?>
                     </p>
                 </form> 
             </div>
@@ -52,14 +55,14 @@ include("header.php");
                         echo '  <div class="col s3">
                                     <div class="card" style="width:73%">
                                         <div class="card-image">
-                                            <img src="images/sample-1.jpg">
+                                            <img src="">
                                         </div>
                                         <div class="card-content">
                                             <p>'.$oeuvre['nomOeuvre'].'</p>
-                                            <p>'.$oeuvre['prix'].' $</p>
                                         </div>
                                         <div class="card-action">
-                                            <a href="#" style="color:#00e676">Acheter</a>
+                                            <a href="#" style="color:#00e676; text-align:center; margin:0">Acheter</a>
+                                            <p>'.$oeuvre['prix'].' $</p>
                                         </div>
                                     </div>    
                                 </div>';
