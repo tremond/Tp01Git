@@ -18,7 +18,29 @@ function tryConnection ($login, $password) {
     return $donnees;
 }
 
-function ListeOeuvresEnLigne() {
+function getFiltreAnnee() {
+    $bdd = new PDO('mysql:host=localhost;dbname=tp01git;charset=utf8', 'root', '');
+    $sqlSelect = 
+        "   SELECT DISTINCT(oeuvres.annee) 
+            FROM oeuvres";
+    $reponse = $bdd->query($sqlSelect);
+    $donnees = $reponse->fetchAll(PDO::FETCH_ASSOC);
+    $reponse->closeCursor();
+    return $donnees;        
+}
+
+function getFiltreTheme() {
+    $bdd = new PDO('mysql:host=localhost;dbname=tp01git;charset=utf8', 'root', '');
+    $sqlSelect = 
+        "   SELECT DISTINCT(oeuvres.annee) 
+            FROM oeuvres";
+    $reponse = $bdd->query($sqlSelect);
+    $donnees = $reponse->fetchAll(PDO::FETCH_ASSOC);
+    $reponse->closeCursor();
+    return $donnees;        
+}
+
+function listeOeuvresEnLigne() {
     $bdd = new PDO('mysql:host=localhost;dbname=tp01git;charset=utf8', 'root', '');
     $sqlSelect = 
         "   SELECT * 

@@ -21,7 +21,6 @@ include("header.php");
     </div>
 
     <div class="container">
-
         <!--Filtre-->
         <div class="row grey lighten-2">
             <div class="col s3">
@@ -29,10 +28,13 @@ include("header.php");
                     Filtrer par :
                 </p>
                 <form action="#">
-                    <p class="flat-text">Années : <br>
-                        <label><input type="checkbox"/><span>2018</span></label><br>
-                        <label><input type="checkbox"/><span>2017</span></label><br>
-                        <label><input type="checkbox"/><span>2017</span></label>
+                    <p class="flat-text">Année : <br>
+                        <?php
+                        $dateOeuvre = getFiltreAnnee();
+                        foreach ($dateOeuvre as $date ) {
+                            echo '<label><input type="checkbox"/><span>'.$date['annee'].'</span></label><br>';
+                        }
+                        ?>
                     </p>
                     <p class="flat-text">Thème : <br>
                         <label><input type="checkbox"/><span>Animaux</span></label><br>
@@ -43,26 +45,27 @@ include("header.php");
             </div>
 
             <!-- Oeuvres -->
-            <div class="col s9">
-                <div class="container" style="text-align:center">
+            <div class="col s9" style="text-align:center">
                     <?php 
-                    $oeuvres = ListeOeuvresEnLigne();
+                    $oeuvres = listeOeuvresEnLigne();
                     foreach ($oeuvres as $oeuvre) {
-                        echo '  <div class="card" style="width:73%">
-                                    <div class="card-image">
-                                        <img src="images/sample-1.jpg">
-                                    </div>
-                                    <div class="card-content">
-                                        <p>'.$oeuvre['nomOeuvre'].'</p>
-                                        <p>'.$oeuvre['prix'].' $</p>
-                                    </div>
-                                    <div class="card-action">
-                                        <a href="#">Acheter</a>
-                                    </div>
+                        echo '  <div class="col s3">
+                                    <div class="card" style="width:73%">
+                                        <div class="card-image">
+                                            <img src="images/sample-1.jpg">
+                                        </div>
+                                        <div class="card-content">
+                                            <p>'.$oeuvre['nomOeuvre'].'</p>
+                                            <p>'.$oeuvre['prix'].' $</p>
+                                        </div>
+                                        <div class="card-action">
+                                            <a href="#" style="color:#00e676">Acheter</a>
+                                        </div>
+                                    </div>    
                                 </div>';
                     } 
                     ?>
-                </div>
+                
             </div>
         </div>
     </div>    
