@@ -20,11 +20,19 @@ include("header.php");
         </div>
 
         <h4>Filtrer par :</h4> 
+            <h5>Années</h5>
             <form action="#">
                 <p>
                     <label><input type="checkbox"/><span>2018</span></label>
                     <label><input type="checkbox"/><span>2017</span></label>
                     <label><input type="checkbox"/><span>2017</span></label>
+                </p>
+
+            <h5>Thème</h5>
+                <p>
+                    <label><input type="checkbox"/><span>Animaux</span></label>
+                    <label><input type="checkbox"/><span>Figurines</span></label>
+                    <label><input type="checkbox"/><span>Abstrait</span></label>
                 </p>
             </form>
 
@@ -33,7 +41,7 @@ include("header.php");
         foreach ($oeuvres as $oeuvre) {
             echo '';
         } 
-        var_dump($listeOuvre);
+        var_dump($oeuvres);
         ?>
     </div>
 </div>
