@@ -24,7 +24,7 @@ function ListeOeuvresEnLigne() {
         "   SELECT * 
             FROM oeuvres";
     $reponse = $bdd->query($sqlSelect);
-    $donnees = $reponse->fetchAll();
+    $donnees = $reponse->fetchAll(PDO::FETCH_ASSOC);
     $reponse->closeCursor();
     return $donnees;
 }
