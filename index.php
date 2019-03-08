@@ -1,23 +1,11 @@
 <?php
-session_start();
-require_once("./functions.php");
-
-if(!empty($_GET['deconnexion'])) {
-    unset($_SESSION);
-    session_destroy();
-    header('Location: connexion.php');exit;
-}
-
-if(!empty($_SESSION['user'])) {
-    if($_SESSION['user']['isAdmin'] == "1") {
-        header('Location: acceuilAdmin.php');
-    }
-    elseif ($_SESSION['user']['isAdmin'] == "0") {
-        header('Location: acceuilUser.php');exit;
-    } 
-    }
-    else {
-        header('Location: connexion.php');exit;
-    }
-
+include("header.php");
 ?>
+<div id=topIndex>image de présentation</div>
+
+<div id="descriptionPeintre">
+    <div id="LaptiteTortue"><img src="FranklinInTheHood.png" style="width:160px" /></div>
+    <div id="blabla">Tempore quo primis auspiciis in mundanum fulgorem surgeret victura dum erunt homines Roma, ut augeretur sublimibus incrementis, foedere pacis aeternae Virtus convenit atque Fortuna plerumque dissidentes, quarum si altera defuisset, ad perfectam non venerat summitatem.</div>
+</div>
+
+<div>Mes ouevres</div>
