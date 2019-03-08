@@ -32,7 +32,8 @@ INSERT INTO Oeuvres (idOeuvre, annee, nomOeuvre, prix, idTheme) VALUES
 (2, 2016, "Le cry", 53, 3),
 (3, 2017,"La loutre", 100, 1),
 (4, 2018,"Fizz", 25, 2),
-(5, 2019,"El cartono", 1000, 3);
+(5, 2019,"El cartono", 1000, 3),
+(6, 2015, "Husky", 1200, 1);
 
 INSERT INTO Theme (idTheme, nomTheme) VALUES 
 (1, "Animaux"),
