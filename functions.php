@@ -22,7 +22,8 @@ function getFiltreAnnee() {
     $bdd = new PDO('mysql:host=localhost;dbname=tp01git;charset=utf8', 'root', '');
     $sqlSelect = 
         "   SELECT DISTINCT(oeuvres.annee) 
-            FROM oeuvres";
+            FROM oeuvres
+            ORDER BY oeuvres.annee DESC";
     $reponse = $bdd->query($sqlSelect);
     $donnees = $reponse->fetchAll(PDO::FETCH_ASSOC);
     $reponse->closeCursor();
