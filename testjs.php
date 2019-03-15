@@ -1,3 +1,3 @@
 <?php
-    $test = "Salut a tous"; 
+    echo "Salut a tous";
 ?>
