@@ -1,3 +1,4 @@
 <?php
-    include("script.js");
 ?>
+
+<script type="text/javascript" src="script.js"></script>

@@ -51,7 +51,4 @@ function listeOeuvresEnLigne() {
     $reponse->closeCursor();
     return $donnees;
 }
-
-
-
 ?>

@@ -5,6 +5,7 @@ include("header.php");
     <h2>Image de présentation</h2>
 </div>
 
+<script scr="script.js"></script>
 <div class="container">
     <div class="row" style="text-align:center">
         <h4>BRYANGELO CRANG</h4>
