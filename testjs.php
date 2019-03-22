@@ -13,8 +13,6 @@ foreach ($oeuvres as $oeuvre ) {
 <p id="demo"></p>
 
 
-<?php 
-    include("footer.php");
 */
 
 function getOeuvre() {
@@ -28,11 +26,14 @@ function getOeuvre() {
     $tab = array();
     while($data = $reponse->fetch())
 		{
-			$tab[] = $data;
+            $tab[] = $data;
+            var_dump($tab);
 		}
-		echo json_encode($tab);
+        echo json_encode($tab);
+        
+        
 }
 
+ 
+    include("footer.php");
 ?>
-
-
