@@ -9,7 +9,7 @@ include("header.php");
 <div class="container">
     <div class="row" style="text-align:center">
         <h4>BRYANGELO CRANG</h4>
-        <img src="FranklinInTheHood" alt="FranklinInTheHood">
+        <img src="InkedFranklinInTheHood" alt="FranklinInTheHood">
     </div>
     <div class="row" style="text-align:center">
     Tempore quo primis auspiciis in mundanum fulgorem surgeret victura dum erunt homines Roma, ut augeretur sublimibus incrementis, foedere pacis aeternae Virtus convenit atque Fortuna plerumque dissidentes, quarum si altera defuisset, ad perfectam non venerat summitatem.
@@ -75,9 +75,38 @@ include("header.php");
     </div>    
 </div>
 
+
+
 <div id="block_infos">
 		<div><span class="title_info">Alors peut etre (année): </span> <span id="test"></span></div>
 </div>
+
+<?php
+    $bdd = connectToDatabase();
+    $query = 'SELECT * FROM Oeuvres';
+    $reponse = $bdd->query($query);
+
+    if (!empty($reponse) && $reponse->rowCount() > 0) {
+
+?>
+        <h2>TEST OEUVRE AJAX</h2>
+        <div class="container">
+            <div class="row">
+                <div class="container">
+<?php
+
+                while($data = $reponse->fetch()) {
+?>
+
+                    <div id="<?php echo $data["idOeuvre"];?>"></div>
+<?php
+                }
+    }
+?>
+
+            </div>
+        </div>
+    </div>
 
 <?php
     include("footer.php");
