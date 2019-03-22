@@ -75,6 +75,12 @@ include("header.php");
     </div>    
 </div>
 
+<div id="block_infos">
+		<div><span class="title_info">Alors peut etre (année): </span> <span id="test"></span></div>
+</div>
+
 <?php
     include("footer.php");
 ?>
+
+<script type="text/javascript" src="script.js"></script>
