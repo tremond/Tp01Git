@@ -18,7 +18,6 @@ $(document).ready(function() {
 
 $(document).ready(function() {
     $("#UpdateButton").click(update);
-    $('#NatAm').change(update);
   });
   
   function update() {
@@ -27,4 +26,10 @@ $(document).ready(function() {
       type: 'POST',
       dataType: 'json'
     });
-  }
+}
+
+
+//id pour checkbox
+$('#containerAnnee label').attr('id', function(i) {
+    return 'checkbox'+(i+1);
+ });
