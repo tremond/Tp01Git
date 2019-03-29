@@ -15,3 +15,16 @@ $(document).ready(function() {
     }
     
 });
+
+$(document).ready(function() {
+    $("#UpdateButton").click(update);
+    $('#NatAm').change(update);
+  });
+  
+  function update() {
+    $.ajax({
+      url: '/Transactions/NativeUpdate',
+      type: 'POST',
+      dataType: 'json'
+    });
+  }

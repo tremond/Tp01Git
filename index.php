@@ -7,9 +7,11 @@ include("header.php");
 
 <script scr="script.js"></script>
 <div class="container">
-    <div class="row" style="text-align:center">
+    <div class="row" id="ligneTitre">
         <h4>BRYANGELO CRANG</h4>
-        <img src="InkedFranklinInTheHood" alt="FranklinInTheHood">
+    </div>
+    <div class="row" id="ligneMeilleurPaint">
+        <img src="lourdCetteImage" id="meilleurePaint" alt="FranklinInTheHood">
     </div>
     <div class="row" style="text-align:center">
     Tempore quo primis auspiciis in mundanum fulgorem surgeret victura dum erunt homines Roma, ut augeretur sublimibus incrementis, foedere pacis aeternae Virtus convenit atque Fortuna plerumque dissidentes, quarum si altera defuisset, ad perfectam non venerat summitatem.
@@ -49,12 +51,12 @@ include("header.php");
             </div>
 
             <!-- Oeuvres -->
-            <div class="col s9" style="text-align:center">
+            <div class="col s9" id="containerOeuvre">
                     <?php 
                     $oeuvres = listeOeuvresEnLigne();
                     foreach ($oeuvres as $oeuvre) {
                         echo '  <div class="col s3">
-                                    <div class="card" style="width:73%">
+                                    <div id="cardOeuvre" class="card">
                                         <div class="card-image">
                                             <img src="">
                                         </div>
@@ -62,7 +64,11 @@ include("header.php");
                                             <p>'.$oeuvre['nomOeuvre'].'</p>
                                         </div>
                                         <div class="card-action">
+<<<<<<< Updated upstream
                                             <a href="pageAchat.php?oeuvre='.$oeuvre['nomOeuvre'].'" style="color:#00e676; text-align:center; margin:0">Acheter</a>
+=======
+                                            <a id="lienAcheter" href="#">Acheter</a>
+>>>>>>> Stashed changes
                                             <p>'.$oeuvre['prix'].' $</p>
                                         </div>
                                     </div>    

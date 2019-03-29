@@ -1,0 +1,25 @@
+#lienAcheter {
+    margin:0;
+    color:#00e676; 
+    text-align: center; 
+}
+
+#cardOeuvre {
+    width:73%;
+}
+
+#containerOeuvre {
+    text-align: center;
+}
+
+#ligneTitre {
+    text-align: center;
+}
+
+#ligneMeilleurPaint {
+    text-align: center;
+}
+
+#meilleurePaint {
+    height: 200px;
+}
