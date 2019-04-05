@@ -24,7 +24,6 @@ include("header.php");
     </div>
 
     <div class="container">
-        <!--Filtre-->
         <div class="row grey lighten-2">
             <div class="col s3">
                 <p class="flat-text-header">
@@ -50,7 +49,7 @@ include("header.php");
                 </form> 
             </div>
 
-            <!-- Oeuvres -->
+
             <div class="col s9" id="containerOeuvre">
                     <?php 
                     $oeuvres = listeOeuvresEnLigne();
@@ -64,11 +63,8 @@ include("header.php");
                                             <p>'.$oeuvre['nomOeuvre'].'</p>
                                         </div>
                                         <div class="card-action">
-<<<<<<< Updated upstream
                                             <a href="pageAchat.php?oeuvre='.$oeuvre['nomOeuvre'].'" style="color:#00e676; text-align:center; margin:0">Acheter</a>
-=======
                                             <a id="lienAcheter" href="#">Acheter</a>
->>>>>>> Stashed changes
                                             <p>'.$oeuvre['prix'].' $</p>
                                         </div>
                                     </div>    
