@@ -18,7 +18,7 @@ include("header.php");
     </div>
 
     <div class="container">
-            <div class="row grey lighten-2" style="text-align:center">
+            <div id="letitrequibouge" class="row" style="text-align:center">
                 <h4>Mes oeuvres</h4>
             </div>
     </div>
@@ -42,11 +42,14 @@ include("header.php");
                         }
                         ?>
                     </p>
-                    <p class="flat-text" id="">Thème : <br>
+                    <p class="flat-text" id="containerTheme">Thème : <br>
                         <?php
                         $themes = getFiltreTheme();
                         foreach ($themes as $theme) {
-                            echo '<label><input type="checkbox"/><span>'.$theme['nomTheme'].'</span></label><br>';
+                            echo '  <label>
+                                        <input type="checkbox"/>
+                                        <span>'.$theme['nomTheme'].'</span>
+                                    </label><br>';
                         }
                         ?>
                     </p>
@@ -79,6 +82,9 @@ include("header.php");
         </div>
     </div>    
 </div>
+
+
+<a href="pageAchat.php">pute</a>
 
 <?php
     include("footer.php");
