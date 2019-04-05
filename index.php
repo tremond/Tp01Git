@@ -11,14 +11,14 @@ include("header.php");
         <h4>BRYANGELO CRANG</h4>
     </div>
     <div class="row" id="ligneMeilleurPaint">
-        <img src="lourdCetteImage" id="meilleurePaint" alt="FranklinInTheHood">
+        <img src="./images/lourdCetteImage" id="meilleurePaint" alt="FranklinInTheHood">
     </div>
     <div class="row" style="text-align:center">
     Tempore quo primis auspiciis in mundanum fulgorem surgeret victura dum erunt homines Roma, ut augeretur sublimibus incrementis, foedere pacis aeternae Virtus convenit atque Fortuna plerumque dissidentes, quarum si altera defuisset, ad perfectam non venerat summitatem.
     </div>
 
     <div class="container">
-            <div class="row grey lighten-2" style="text-align:center">
+            <div id="letitrequibouge" class="row" style="text-align:center">
                 <h4>Mes oeuvres</h4>
             </div>
     </div>
@@ -30,19 +30,25 @@ include("header.php");
                     Filtrer par :
                 </p>
                 <form action="#">
-                    <p class="flat-text">Année : <br>
+                    <p class="flat-text" id="containerAnnee">Année : <br>
                         <?php
                         $dateOeuvre = getFiltreAnnee();
                         foreach ($dateOeuvre as $date ) {
-                            echo '<label><input type="checkbox"/><span>'.$date['annee'].'</span></label><br>';
+                            echo '  <label>
+                                        <input id="checkbox" type="checkbox"/>
+                                        <span>'.$date['annee'].'</span>
+                                    </label><br>';
                         }
                         ?>
                     </p>
-                    <p class="flat-text">Thème : <br>
+                    <p class="flat-text" id="containerTheme">Thème : <br>
                         <?php
                         $themes = getFiltreTheme();
                         foreach ($themes as $theme) {
-                            echo '<label><input type="checkbox"/><span>'.$theme['nomTheme'].'</span></label><br>';
+                            echo '  <label>
+                                        <input type="checkbox"/>
+                                        <span>'.$theme['nomTheme'].'</span>
+                                    </label><br>';
                         }
                         ?>
                     </p>
@@ -63,7 +69,10 @@ include("header.php");
                                             <p>'.$oeuvre['nomOeuvre'].'</p>
                                         </div>
                                         <div class="card-action">
+<<<<<<< HEAD
                                             <a href="pageAchat.php?oeuvre='.$oeuvre['nomOeuvre'].'" style="color:#00e676; text-align:center; margin:0">Acheter</a>
+=======
+>>>>>>> ec48a37bc99afe566ec1beee0351d2fa74720170
                                             <a id="lienAcheter" href="#">Acheter</a>
                                             <p>'.$oeuvre['prix'].' $</p>
                                         </div>
@@ -78,37 +87,7 @@ include("header.php");
 </div>
 
 
-
-<div id="block_infos">
-		<div><span class="title_info">Alors peut etre (année): </span> <span id="test"></span></div>
-</div>
-
-<?php
-    $bdd = connectToDatabase();
-    $query = 'SELECT * FROM Oeuvres';
-    $reponse = $bdd->query($query);
-
-    if (!empty($reponse) && $reponse->rowCount() > 0) {
-
-?>
-        <h2>TEST OEUVRE AJAX</h2>
-        <div class="container">
-            <div class="row">
-                <div class="container">
-<?php
-
-                while($data = $reponse->fetch()) {
-?>
-
-                    <div id="<?php echo $data["idOeuvre"];?>"></div>
-<?php
-                }
-    }
-?>
-
-            </div>
-        </div>
-    </div>
+<a href="pageAchat.php">pute</a>
 
 <?php
     include("footer.php");

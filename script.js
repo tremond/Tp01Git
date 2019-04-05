@@ -16,15 +16,26 @@ $(document).ready(function() {
     
 });
 
+/*JE SAIS PAS TROP CE QUE JE FAIS
 $(document).ready(function() {
-    $("#UpdateButton").click(update);
-    $('#NatAm').change(update);
+    $("#checkboxAnnee1").click(update);
   });
   
   function update() {
     $.ajax({
-      url: '/Transactions/NativeUpdate',
-      type: 'POST',
-      dataType: 'json'
+      url: 'fichier PHP exécuté côté serveur.php',
+      type: 'GET',
+      data : 'oeuvres=' + oeuvres
     });
-  }
+}*/
+
+
+//id pour checkbox
+$('#containerAnnee label').attr('id', function(i) {
+    return 'checkboxAnnee'+(i+1);
+});
+
+$('#containerTheme label').attr('id', function(i) {
+    return 'checkboxTheme'+(i+1);
+});
+ 

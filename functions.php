@@ -1,7 +1,7 @@
 <?php
 
     function tryConnection ($login, $password) {
-        $bdd = new PDO('mysql:host=localhost;dbname=tp01git;charset=utf8', 'root', '');
+        $bdd = new PDO('mysql:host=localhost;dbname=tp01git;charset=utf8', 'root', 'root');
         $sqlSelect = 
             "   SELECT * 
                 FROM Users 
@@ -19,7 +19,7 @@
     }
 
     function getFiltreAnnee() {
-        $bdd = new PDO('mysql:host=localhost;dbname=tp01git;charset=utf8', 'root', '');
+        $bdd = new PDO('mysql:host=localhost;dbname=tp01git;charset=utf8', 'root', 'root');
         $sqlSelect = 
             "   SELECT DISTINCT(oeuvres.annee) 
                 FROM oeuvres
@@ -31,7 +31,7 @@
     }
 
     function getFiltreTheme() {
-        $bdd = new PDO('mysql:host=localhost;dbname=tp01git;charset=utf8', 'root', '');
+        $bdd = new PDO('mysql:host=localhost;dbname=tp01git;charset=utf8', 'root', 'root');
         $sqlSelect = 
             "   SELECT DISTINCT(theme.nomTheme) 
                 FROM theme";
@@ -42,7 +42,7 @@
     }
 
     function listeOeuvresEnLigne() {
-        $bdd = new PDO('mysql:host=localhost;dbname=tp01git;charset=utf8', 'root', '');
+        $bdd = new PDO('mysql:host=localhost;dbname=tp01git;charset=utf8', 'root', 'root');
         $sqlSelect = 
             "   SELECT * 
                 FROM oeuvres";
